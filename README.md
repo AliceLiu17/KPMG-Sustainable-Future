@@ -2,6 +2,8 @@
 
 *MEMBERS:* Alice Liu, Shoya Dixon, Wang Xiang, Melina Tsai, Rachel Tong, Ana Maria Rodriguez
 
+
+
 *CHALLENGE:*
 Identify where to place EV charging stations across either the greater Dallas or Chicago metropolitan areas to have the largest impact on the community.
 
