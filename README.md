@@ -2,7 +2,7 @@
 
 **MEMBERS:** Alice Liu, Shoya Dixon, Wang Xiang, Melina Tsai, Rachel Tong, Ana Maria Rodriguez
 
-
+----
 
 **CHALLENGE:**
 
