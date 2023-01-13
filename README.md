@@ -43,8 +43,7 @@ All the data are in numerical value.
 5. **Modeling** 
   - Used: OLS, Lasso, Random Forest, Gradient Boosted Decision Tree (GBDT) model. 
   - Evaluated each model using: RMSE, MSE, K-Fold Validation
-
-RMSE Yielded the best result:
+  - RMSE Yielded the best result:
 
 | Model Name    | Description                                                      | RMSE |
 | ------------- | ---------------------------------------------------------------- | ---- |
@@ -53,7 +52,7 @@ RMSE Yielded the best result:
 | Random Forest | Fit multiple “overfit” trees in parallel and average the results | 75   |
 | GBDT          | Iterative tuning of a tree by correcting errors                  | 79   |
 
-The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
+  - The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
 
 6. **Forecasting Zip Code Charactistics**
 Used historical GDP data for Dallas 2002-2020 and ARIMA to help predict the FUTURE GDP data for Dallas 2020-2030. Utilizing these predictions, we obtain the top zip codes that needs EVCS. We sort by largest percentage. 
