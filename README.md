@@ -15,18 +15,18 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 
 ### **APPROACH:**
 ---
-1. Research
+1. **Research**
   - Brainstorm and research features that would help indicate where EVCS should be placed
   - Utilized Google, Kaggle, US Government website, KPMG provided data websites, OpenStreetMaps, Statistica, City of Dallas GIS Services, etc. 
 
-2. Data Visualization and Cleaning
+2. **Data Visualization and Cleaning**
   - Visualize what information the data is trying to tell us
   - Drop/replace missing values
   - Drop irrelevant columns
   - Rename columns
   - Convert rows to zip-code level
 
-3. Feature Selections
+3. **Feature Selections**
 
 | Demographics     | Geographic Features                 | Economic Background |
 | ---------------- | ----------------------------------- | ------------------- |
@@ -35,15 +35,63 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 | Race & Ethnicity | Parking Lots                        | EV registrations    |
 |                  | Gas Stations                        |                     |
 
+All the data are in numerical value. 
 
-
-4. Data combination
+4. **Data combination**
   - Combined all the data through zip-code level
   
-5. 
+5. **Modeling** 
+  - Used: OLS, Lasso, Random Forest, Gradient Boosted Decision Tree (GBDT) model. 
+  - Evaluated each model using: RMSE, MSE, K-Fold Validation
 
-Students will be guided to utilize open source software tools to curate public datasets identified by KPMG that comprise several socioeconomic, environmental and infrastructure variables. It is at the team’s discretion how to define and quantify impact, what AI technique is used, as well as what variables from the datasets provided are inputs in the model. At the end of the project, the team will provide an executive summary readout detailing the approach taken and proposed recommendations of where to build the EV charging stations. Students will walk away from this challenge understanding how data is at the core of addressing ESG issues for corporations and governments.
+RMSE Yielded the best result:
 
-**DATASET DESCRIPTION:**
+| Model Name    | Description                                                      | RMSE |
+| ------------- | ---------------------------------------------------------------- | ---- |
+| OLS           | Fits a hyperplane by assigning optimal weights to each feature   | 191  |
+| Lasso         | OLS that penalizes features with large weights                   | 117  |
+| Random Forest | Fit multiple “overfit” trees in parallel and average the results | 75   |
+| GBDT          | Iterative tuning of a tree by correcting errors                  | 79   |
 
-Students will be provided links to access dozens of publicly available data for Dallas and Chicago, comprised of several socioeconomic, environmental and infrastructure variables. The data made available to students to choose from includes structured and semi-structured datasets, including shapefiles of geographic features. In addition, KPMG will provide access to thought leadership pieces to provide students with a business understanding on the infrastructure bill and what Dallas and Chicago are each respectively doing to implement EV charging stations.
+The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
+
+6. **Forecasting Zip Code Charactistics**
+Used historical GDP data for Dallas 2002-2020 and ARIMA to help predict the FUTURE GDP data for Dallas 2020-2030. Utilizing these predictions, we obtain the top zip codes that needs EVCS. We sort by largest percentage. 
+
+The top 3 zip codes to place EVCS: 75246, 75210, 75253
+
+### **SUMMARY**
+The supply and demand of EVCS can be viewed by examining the current EVCS available (supply) and EV registrations (demand)
+
+The most important features (in descending order):
+| Features                   |
+| -------------------------- |
+| Number of businesses       |
+| Asian population           |
+| Household income           |
+| Parking Lots               |
+| House value                |
+| Hispanic Population        |
+| American indian population |
+| Other population           |
+| Black population           |
+| Population                 |
+| Residential business ratio |
+| Hawaiian population        |
+| Female population          |
+| Gas stations               |
+| Shops                      |
+
+The top 3 zip codes to place EVCS: **75246, 75210, 75253**
+
+For more in depth insight, refer to the following slide link for the Appendix: https://docs.google.com/presentation/d/1G_5Mfh4qrS0M1IgiVSp9ZvnUrjJShmQMcsFv2btxDrs/edit?usp=sharing
+
+### **FUTURE GOALS**
+1. Prediction Improvements
+    - Increase accuracy within the simulation model by adding randomization of percentage growth to each feature and using Census data for demographic features
+2. Depth
+  - Identify specific locations rather than higher-level zip codes
+3. Scope
+  - Expand analysis outside of Dallas:
+    - Confirm analyses about predictors for EV Demand
+    - Compare EVCS Supply and Demand in different regions
