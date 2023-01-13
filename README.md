@@ -54,7 +54,9 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 5. **Modeling** 
     - Used: OLS, Lasso, Random Forest, Gradient Boosted Decision Tree (GBDT) model. 
     - Evaluated each model using: RMSE, MSE, K-Fold Validation
-    - RMSE Yielded the best result:
+    - RMSE yielded the best result
+    - The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
+    - RMSE result:
 
 | Model Name    | Description                                                      | RMSE |
 | ------------- | ---------------------------------------------------------------- | ---- |
@@ -63,7 +65,7 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 | Random Forest | Fit multiple “overfit” trees in parallel and average the results | 75   |
 | GBDT          | Iterative tuning of a tree by correcting errors                  | 79   |
 
-    - The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
+
 
 
 
