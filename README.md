@@ -27,6 +27,7 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
   - Convert rows to zip-code level
 
 3. Feature Selections
+
 | Demographics     | Geographic Features                 | Economic Background |
 | ---------------- | ----------------------------------- | ------------------- |
 | Population       | Business/Residential building ratio | House Value         |
