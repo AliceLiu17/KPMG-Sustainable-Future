@@ -20,23 +20,23 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 ### **APPROACH:**
 
 1. **Research**
-  - Brainstorm and research features that would help indicate where EVCS should be placed
-  - Utilized Google, Kaggle, US Government website, KPMG provided data websites, OpenStreetMaps, Statistica, City of Dallas GIS Services, etc. 
+    - Brainstorm and research features that would help indicate where EVCS should be placed
+    - Utilized Google, Kaggle, US Government website, KPMG provided data websites, OpenStreetMaps, Statistica, City of Dallas GIS Services, etc. 
 
 
 
 2. **Data Visualization and Cleaning**
-  - Visualize what information the data is trying to tell us
-  - Drop/replace missing values
-  - Drop irrelevant columns
-  - Rename columns
-  - Convert rows to zip-code level
+    - Visualize what information the data is trying to tell us
+    - Drop/replace missing values
+    - Drop irrelevant columns
+    - Rename columns
+    - Convert rows to zip-code level
 
 
 
 
 3. **Feature Selections**
-  - All the data are in numerical value. 
+    - All the data are in numerical value. 
 
 | Demographics     | Geographic Features                 | Economic Background |
 | ---------------- | ----------------------------------- | ------------------- |
@@ -47,14 +47,14 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 
 
 4. **Data combination**
-  - Combined all the data through zip-code level
+    - Combined all the data through zip-code level
   
   
   
 5. **Modeling** 
-  - Used: OLS, Lasso, Random Forest, Gradient Boosted Decision Tree (GBDT) model. 
-  - Evaluated each model using: RMSE, MSE, K-Fold Validation
-  - RMSE Yielded the best result:
+    - Used: OLS, Lasso, Random Forest, Gradient Boosted Decision Tree (GBDT) model. 
+    - Evaluated each model using: RMSE, MSE, K-Fold Validation
+    - RMSE Yielded the best result:
 
 | Model Name    | Description                                                      | RMSE |
 | ------------- | ---------------------------------------------------------------- | ---- |
@@ -63,7 +63,7 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 | Random Forest | Fit multiple “overfit” trees in parallel and average the results | 75   |
 | GBDT          | Iterative tuning of a tree by correcting errors                  | 79   |
 
-  - The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
+    - The lower the RMSE value it is the better the evaluation: **RANDOM FOREST** is the winner!
 
 
 
@@ -71,7 +71,7 @@ President Biden signed the bipartisan infrastructure bill in November 2021, incl
 6. **Forecasting Zip Code Charactistics**
 Used historical GDP data for Dallas 2002-2020 and ARIMA to help predict the FUTURE GDP data for Dallas 2020-2030. Utilizing these predictions, we obtain the top zip codes that needs EVCS. We sort by largest percentage. 
 
-  - The top 3 zip codes to place EVCS: 75246, 75210, 75253
+    - The top 3 zip codes to place EVCS: 75246, 75210, 75253
 
 
 ----
@@ -109,8 +109,8 @@ For more in depth insight, refer to the following slide link for the Appendix: h
 1. Prediction Improvements
     - Increase accuracy within the simulation model by adding randomization of percentage growth to each feature and using Census data for demographic features
 2. Depth
-  - Identify specific locations rather than higher-level zip codes
+    - Identify specific locations rather than higher-level zip codes
 3. Scope
-  - Expand analysis outside of Dallas:
-    - Confirm analyses about predictors for EV Demand
-    - Compare EVCS Supply and Demand in different regions
+    - Expand analysis outside of Dallas:
+       - Confirm analyses about predictors for EV Demand
+       - Compare EVCS Supply and Demand in different regions
